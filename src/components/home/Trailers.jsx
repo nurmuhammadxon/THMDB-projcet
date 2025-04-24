@@ -59,7 +59,7 @@ function Trailers() {
 
     return (
         <section
-            className='max-w-[1400px] w-full mx-auto pt-[30px] px-10 bg-primary  transition-all duration-500 ease-in-out relative'
+            className='max-w-[1400px] w-full mx-auto pt-[30px] px-10 bg-primary  transition-all duration-500 ease-in-out'
             style={{
                 backgroundImage: bgImage ? `url(https://image.tmdb.org/t/p/original${bgImage})` : 'none',
                 backgroundSize: 'cover',
@@ -85,7 +85,6 @@ function Trailers() {
             <div className='my-5'>
                 <SwiperMovies data={data} setBgImage={setBgImage} />
             </div>
-            <div className='absolute top-0 left-0 w-full h-full bg-[#00000099]' />
         </section>
     )
 }
