@@ -22,3 +22,15 @@
 .swiper__before.hide-gradient::after {
     opacity: 0;
 }
+
+.swiper-horizontal>.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    bottom: 2px !important;
+    height: auto !important; 
+}
+
+.swiper-scrollbar-drag {
+    background: #0000004d !important;
+    height: 8px !important;
+}

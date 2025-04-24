@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Mousewheel } from 'swiper/modules'
+import { Mousewheel, Scrollbar } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/scrollbar';
 
 // icons
 import { CgMoreO } from "react-icons/cg";
@@ -40,13 +41,14 @@ function SwiperMovies({ data, setBgImage = false }) {
     return (
         <div className='relative swiper__before'>
             <Swiper
-                modules={[Mousewheel]}
+                modules={[Mousewheel, Scrollbar]}
                 slidesPerView={6}
                 grabCursor={true}
                 mousewheel={true}
+                scrollbar={{ draggable: true }}
                 onProgress={handleProgress}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                className='cursor-pointer'
+                className='cursor-pointer py-5! h-auto'
             >
                 {data.map((item) => (
                     <SwiperSlide

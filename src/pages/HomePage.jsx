@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import { HomeBanner, PopularMovie, PopularTv, Trailers } from '../components'
+import { HomeBanner, Leaderboard, PopularMovie, PopularTv, Trailers } from '../components'
 
 function HomePage() {
   return (
@@ -10,6 +10,7 @@ function HomePage() {
       <PopularMovie />
       <Trailers />
       <PopularTv />
+      <Leaderboard />
     </div>
   )
 }
