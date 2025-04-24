@@ -33,14 +33,14 @@ function Trailers() {
             params: { language: 'en-US', page: '1' },
             headers: {
                 accept: 'application/json',
-                Authorization: ''
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjk5NWRhYWU1NTE4ZDZmYTI5MGViMmU4Y2Q0YTQ5NiIsIm5iZiI6MTc0NDg2Nzk2Ny40ODE5OTk5LCJzdWIiOiI2ODAwOTI3ZmVmNWFlNjg3Y2JkOWM5MzgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.fxp9Onc6ShRqWb6MYgV_abl01Xmc62Q8h1jJ_s3Ml_I'
             }
         };
     }
 
     const getTrailers = async () => {
-        const trendingType = isTrailers === 'Now Playing' ? 'now_playing' : 'top_rated'
-        const options = TrailersOptions(trendingType);
+        const trailerType = isTrailers === 'Now Playing' ? 'now_playing' : 'top_rated'
+        const options = TrailersOptions(trailerType);
         try {
             const res = await axios.request(options)
             if (res.status === 200) {
