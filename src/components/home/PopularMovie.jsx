@@ -74,7 +74,7 @@ function TodayMovie() {
             }}
         >
             <div className='w-full py-4 md:py-8 px-2 sm:px-6 lg:px-10 flex flex-col'>
-                <div className='flex items-center justify-between gap-4 px-2 md:px-4'>
+                <div className='flex items-center gap-4 px-2 md:px-4'>
                     <h2 className='font-semibold text-xl sm:text-2xl text-gray-800'>
                         Trending
                     </h2>
