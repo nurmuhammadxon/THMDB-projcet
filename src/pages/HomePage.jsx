@@ -1,5 +1,3 @@
-import React from 'react'
-
 // components
 import { HomeBanner, PopularMovie, PopularTv, Trailers } from '../components'
 

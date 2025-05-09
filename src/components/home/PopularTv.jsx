@@ -55,7 +55,7 @@ function PopularTv() {
 
     return (
         <section className='w-full bg-white'>
-            <div className='py-[30px] sm:px-5 md:px-10'>
+            <div className='py-4 md:py-8 px-2 sm:px-5 md:px-10'>
                 <div className='px-4 flex items-center gap-5'>
                     <h2 className='font-semibold text-lg sm:text-xl md:text-2xl'>What's Popular</h2>
                     <div>

@@ -84,15 +84,14 @@ function SwiperMovies({ data, setBgImage = false }) {
                         onMouseEnter={() =>
                             setBgImage(item.backdrop_path || item.poster_path)}
                     >
-                        <div
-                            onClick={() => navigateBtn(item.id)}
-                        >
-                            <div className='w-full h-[225px] overflow-hidden rounded-lg shadow-md relative '>
+                        <div>
+                            <div className='w-full h-[225px] overflow-hidden rounded-lg shadow-md relative'>
                                 <div
                                     className='w-full h-full bg-cover bg-center'
                                     style={{
                                         backgroundImage: `url(https://image.tmdb.org/t/p/w500${item.backdrop_path})`
                                     }}
+                                    onClick={() => navigateBtn(item.id)}
                                 />
                                 <div className='absolute top-2 right-2 opacity-80 z-50'>
                                     <button
@@ -107,20 +106,20 @@ function SwiperMovies({ data, setBgImage = false }) {
 
                                     {isMore === item.id && (
                                         <div className='w-40 absolute top-8 right-0 bg-white shadow-md rounded-md p-2.5 z-50 text-sm'>
-                                            <ul className='space-y-1'>
-                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t'>
-                                                    <span><FaList /></span>
+                                            <ul className='w-full space-y-1'>
+                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center'>
+                                                    <span className='mr-5'><FaList /></span>
                                                     Add to list
                                                 </li>
-                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t'>
+                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t border-t-[#00000099]'>
                                                     <span><FaHeart /></span>
                                                     Favorite
                                                 </li>
-                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t'>
+                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t border-t-[#00000099]'>
                                                     <span><FaBookmark /></span>
                                                     Watchlist
                                                 </li>
-                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-y'>
+                                                <li className='hover:bg-primary hover:text-gray-400 p-1 px-2 cursor-pointer flex items-center gap-1 border-t border-t-[#00000099]'>
                                                     <span><FaStar /></span>
                                                     Your reting
                                                 </li>
