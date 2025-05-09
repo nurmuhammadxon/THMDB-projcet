@@ -12,8 +12,7 @@ const ButtonTrending = ({ title, isType, setIsType }) => {
     return (
         <button
             type='button'
-            className={`
-    rounded-4xl py-1 px-5 text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer
+            className={`rounded-4xl py-1 px-2 md:px-5 text-sm md:text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer
     ${isType === title
                     ? 'bg-primary text-[#1ed5a9]'
                     : 'bg-white text-primary'}
@@ -66,17 +65,20 @@ function TodayMovie() {
     }, [pathname, isTrending])
 
     return (
-        <section className='w-full'
+        <section
+            className='w-full'
             style={{
                 backgroundImage: `url(${tredingBg})`,
                 backgroundPosition: '50% 200px',
                 backgroundRepeat: "no-repeat"
             }}
         >
-            <div className='w-full py-[30px] px-10 max-w-[1400px] flex flex-col'>
-                <div className='px-10 flex items-center justify-items-center gap-5'>
-                    <h2 className='font-semibold text-2xl'>Trending</h2>
-                    <div className='flex items-center border border-primary rounded-4xl'>
+            <div className='w-full py-4 md:py-8 px-2 sm:px-6 lg:px-10 flex flex-col'>
+                <div className='flex items-center justify-between gap-4 px-2 md:px-4'>
+                    <h2 className='font-semibold text-xl sm:text-2xl text-gray-800'>
+                        Trending
+                    </h2>
+                    <div className='flex items-center border border-primary rounded-full overflow-hidden'>
                         <ButtonTrending
                             title='Today'
                             isType={isTrending}
@@ -89,11 +91,13 @@ function TodayMovie() {
                         />
                     </div>
                 </div>
-                <div className='my-5'>
+
+                <div className='mt-2 md:mt-6'>
                     <SwiperMovies data={data} />
                 </div>
             </div>
         </section>
+
     )
 }
 

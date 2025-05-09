@@ -2,7 +2,7 @@
 
 @theme {
     --font-display: "Source Sans Pro", 'Arial', 'sans-serif';
-    --color-primary: rgb(3, 37, 65);
+    --color-primary: #032541;
 }
 
 .swiper__before::after {
@@ -27,7 +27,7 @@
 .swiper-scrollbar.swiper-scrollbar-horizontal {
     position: absolute;
     bottom: 2px !important;
-    height: auto !important; 
+    height: auto !important;
 }
 
 .swiper-scrollbar-drag {

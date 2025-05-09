@@ -6,7 +6,7 @@ import { Header, Footer } from '../components'
 
 function RootLayout() {
     return (
-        <div className='relative font-display max-w-[1400px] mx-auto'>
+        <div className='relative font-display w-full'>
             <Header />
             <main>
                 <Outlet />

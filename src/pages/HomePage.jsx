@@ -1,16 +1,15 @@
 import React from 'react'
 
 // components
-import { HomeBanner, Leaderboard, PopularMovie, PopularTv, Trailers } from '../components'
+import { HomeBanner, PopularMovie, PopularTv, Trailers } from '../components'
 
 function HomePage() {
   return (
-    <div >
+    <div className='mt-20'>
       <HomeBanner />
       <PopularMovie />
       <Trailers />
       <PopularTv />
-      <Leaderboard />
     </div>
   )
 }

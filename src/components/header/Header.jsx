@@ -93,7 +93,7 @@ function Header() {
                 </div>
 
                 {/* mobile menu */}
-                <div className='block md:hidden relative'>
+                <div className='block md:hidden relative bg-primary'>
                     <div>
                         <button
                             className='text-3xl text-white'

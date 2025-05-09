@@ -5,7 +5,7 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-function CircularRating({ value }) {
+function CircularRating({ value, size = '32px' }) {
     const getColor = (val) => {
         if (val < 50) return "#f44336";
         if (val < 70) return "#ff9800";
@@ -13,7 +13,7 @@ function CircularRating({ value }) {
     };
 
     return (
-        <div className="w-8 h-8">
+        <div style={{ width: size, height: size }}>
             <CircularProgressbar
                 value={value}
                 text={`${value}%`}

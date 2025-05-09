@@ -48,20 +48,19 @@ function PopularTv() {
             console.error('Xatolik yuz berdi!', error);
         }
     }
-    
+
     useEffect(() => {
         getMovieData()
     }, [pathname, isTrending])
 
-
     return (
         <section className='w-full bg-white'>
-            <div className='py-[30px] px-10'>
-                <div className='flex items-center gap-5'>
-                    <h2 className='font-semibold text-2xl'>What's Popular</h2>
+            <div className='py-[30px] sm:px-5 md:px-10'>
+                <div className='px-4 flex items-center gap-5'>
+                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl'>What's Popular</h2>
                     <div>
                         <button
-                            className='rounded-4xl py-1 px-5 text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer bg-primary text-[#1ed5a9]'
+                            className='rounded-4xl py-1 px-5 text-sm md:text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer bg-primary text-[#1ed5a9]'
                             onClick={handleTrend}
                         >
                             {isTrending}

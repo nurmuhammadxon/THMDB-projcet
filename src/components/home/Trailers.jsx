@@ -7,8 +7,7 @@ const ButtonTrending = ({ title, isType, setIsType }) => {
     return (
         <button
             type='button'
-            className={`
-    rounded-4xl py-1 px-5 text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer
+            className={`rounded-4xl py-1 px-2 md:px-5 text-xs sm:text-sm md:text-base font-semibold transition-all duration-200 ease-in-out cursor-pointer
     ${isType === title
                     ? 'bg-[#1ed5a9] text-primary'
                     : 'bg-inherit text-white'}
@@ -59,7 +58,7 @@ function Trailers() {
 
     return (
         <section
-            className='max-w-[1400px] w-full mx-auto pt-[30px] px-10 bg-primary  transition-all duration-500 ease-in-out'
+            className='py-4 md:py-8 px-2 sm:px-6 lg:px-10 flex flex-col'
             style={{
                 backgroundImage: bgImage ? `url(https://image.tmdb.org/t/p/original${bgImage})` : 'none',
                 backgroundSize: 'cover',
@@ -67,8 +66,8 @@ function Trailers() {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div className='flex items-center gap-5'>
-                <h2 className='text-2xl font-semibold text-white'>Latest Trailers</h2>
+            <div className='flex items-center gap-4 px-2 md:px-4'>
+                <h2 className='font-semibold text-sm sm:text-xl md:text-2xl text-white'>Latest Trailers</h2>
                 <div className='flex items-center border border-[#1ed5a9] rounded-4xl'>
                     <ButtonTrending
                         title='Now Playing'
@@ -82,7 +81,7 @@ function Trailers() {
                     />
                 </div>
             </div>
-            <div className='my-5'>
+            <div className='mt-2 md:mt-6'>
                 <SwiperMovies data={data} setBgImage={setBgImage} />
             </div>
         </section>
