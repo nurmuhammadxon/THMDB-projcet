@@ -15,9 +15,8 @@ import { navList } from '../../util/constatns'
 import { AuthButton, MobileMenu, Search } from '../index'
 
 function Header() {
-    const [addMovie, setAddMovie] = useState(false);
     const [isLoggedIn, setLoggendIn] = useState(false);
-    const [isLanguage, setIsLanguage] = useState(false);
+    const [language, setLanguage] = useState('EN');
     const [isSearch, setIsSearch] = useState(false)
     const [isMenuMobile, setIsMenuMobile] = useState(false)
     const [showHeader, setShowHeader] = useState(true)
@@ -115,9 +114,9 @@ function Header() {
                         <button
                             type='button'
                             className='size-7 border border-white rounded-sm text-white bg-primary font-semibold uppercase relative cursor-pointer hover:text-primary hover:bg-white transition-all duration-200 ease-in'
-                            onClick={() => setIsLanguage(prev => !prev)}
+                            onClick={() => setLanguage(prev => (prev === 'EN' ? 'RU' : 'EN'))}
                         >
-                            EN
+                            {language}
                         </button>
                     </div>
                     <AuthButton isLoggedIn={isLoggedIn} />
